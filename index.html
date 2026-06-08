@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LATAM 400 CL</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #f7f9ff 70%,
+        #dbe7ff 100%
+    );
+
+    overflow-x:hidden;
+}
+
+.container{
+
+    width:100%;
+    max-width:430px;
+
+    margin:auto;
+
+    padding:10px 20px 0;
+
+    text-align:center;
+}
+
+/* LOGO */
+
+.logo{
+
+    font-size:78px;
+    font-weight:900;
+
+    color:#0047d4;
+
+    line-height:1;
+}
+
+.sublogo{
+
+    margin-top:8px;
+
+    font-size:28px;
+    font-weight:bold;
+
+    color:#8e8e8e;
+}
+
+.linea{
+
+    width:120px;
+    height:5px;
+
+    background:#ff3636;
+
+    border-radius:50px;
+
+    margin:15px auto;
+}
+
+/* TITULO */
+
+.titulo{
+
+    color:#00379d;
+
+    font-size:26px;
+    font-weight:800;
+
+    line-height:1.15;
+}
+
+/* ICONO */
+
+.icono{
+
+    width:135px;
+    height:135px;
+
+    border:4px solid #0047d4;
+
+    border-radius:50%;
+
+    margin:20px auto 10px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:65px;
+}
+
+/* BIENVENIDA */
+
+.bienvenido{
+
+    color:#00379d;
+
+    font-size:28px;
+    font-weight:bold;
+
+    margin-bottom:18px;
+}
+
+.ingrese{
+
+    color:#00379d;
+
+    font-size:20px;
+    font-weight:bold;
+
+    margin-bottom:15px;
+}
+
+/* INPUT */
+
+.input-box{
+
+    width:100%;
+
+    padding:18px;
+
+    border:2px solid #bfd0ff;
+
+    border-radius:18px;
+
+    font-size:20px;
+
+    text-align:center;
+}
+
+.input-box::placeholder{
+
+    color:#b0b0b0;
+}
+
+/* BOTON */
+
+.btn{
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:20px;
+
+    border:none;
+
+    border-radius:18px;
+
+    background:#0047d4;
+
+    color:white;
+
+    font-size:22px;
+    font-weight:bold;
+
+    box-shadow:0 5px 12px rgba(0,0,0,.15);
+
+    cursor:pointer;
+}
+
+/* VERSION */
+
+.version{
+
+    margin-top:15px;
+
+    color:#8c8c8c;
+
+    font-size:15px;
+}
+
+/* ONDA */
+
+.wave{
+
+    margin-top:8px;
+
+    height:35px;
+
+    background:
+    radial-gradient(
+        ellipse at center top,
+        white 0%,
+        white 60%,
+        #dbe7ff 61%
+    );
+}
+
+/* CREDITOS */
+
+.creditos{
+
+    background:#dbe7ff;
+
+    padding:5px 15px 15px;
+
+    text-align:center;
+}
+
+.creditos-titulo{
+
+    color:#6d6d6d;
+
+    font-size:13px;
+}
+
+.creditos-nombres{
+
+    margin-top:6px;
+
+    color:#00379d;
+
+    font-size:12px;
+    font-weight:bold;
+}
+
+.creditos-linea{
+
+    width:160px;
+    height:2px;
+
+    background:#0047d4;
+
+    margin:10px auto;
+}
+
+.creditos-final{
+
+    color:#6f6f6f;
+
+    font-size:12px;
+}
+
+/* ===== MODAL ===== */
+
+.modal{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+}
+
+.modalBox{
+
+    width:90%;
+    max-width:340px;
+
+    background:white;
+
+    border-radius:24px;
+
+    padding:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.25);
+}
+
+.modalIcono{
+
+    font-size:60px;
+
+    margin-bottom:10px;
+}
+
+.modalTitulo{
+
+    color:#00379d;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+}
+
+.modalMensaje{
+
+    color:#555;
+
+    font-size:16px;
+
+    line-height:1.5;
+
+    margin-bottom:20px;
+}
+
+.modalBtn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:14px;
+
+    padding:16px;
+
+    background:#0047d4;
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="logo">
+        LATAM
+    </div>
+
+    <div class="sublogo">
+        400 CL
+    </div>
+
+    <div class="linea"></div>
+
+    <div class="titulo">
+        CENTRO DE PROYECTOS
+    </div>
+
+    <div class="icono">
+        👥
+    </div>
+
+    <div class="bienvenido">
+        Bienvenido
+    </div>
+
+    <div class="ingrese">
+        Ingrese su DNI
+    </div>
+
+    <input
+        id="dni"
+        class="input-box"
+        type="text"
+        maxlength="8"
+        placeholder="Ej: 12345678">
+
+    <button
+        class="btn"
+        onclick="probarDNI()">
+        ➜ INGRESAR
+    </button>
+
+    <div class="version">
+        Versión 1.0
+    </div>
+
+</div>
+
+<div class="wave"></div>
+
+<div class="creditos">
+
+    <div class="creditos-titulo">
+        👥 Desarrollado por
+    </div>
+
+    <div class="creditos-nombres">
+        Samir Solano Velita • Gabriela Cisneros Zúñiga
+    </div>
+
+    <div class="creditos-linea"></div>
+
+    <div class="creditos-final">
+        Innovación • Calidad • Compromiso
+    </div>
+
+</div>
+<!-- MODAL -->
+
+<div id="modal" class="modal">
+
+    <div class="modalBox">
+
+        <div
+            id="modalIcono"
+            class="modalIcono">
+            ⚠️
+        </div>
+
+        <div
+            id="modalTitulo"
+            class="modalTitulo">
+            Título
+        </div>
+
+        <div
+            id="modalMensaje"
+            class="modalMensaje">
+            Mensaje
+        </div>
+
+        <button
+            class="modalBtn"
+            onclick="cerrarModal()">
+
+            ACEPTAR
+
+        </button>
+
+    </div>
+
+</div>
+
+<script>
+
+async function probarDNI(){
+
+    const dni =
+        document
+        .getElementById("dni")
+        .value
+        .trim();
+
+    if(dni === ""){
+
+        mostrarModal(
+            "⚠️",
+            "DNI REQUERIDO",
+            "Ingrese su número de DNI."
+        );
+
+        return;
+    }
+
+    if(dni.length !== 8){
+
+        mostrarModal(
+            "⚠️",
+            "DNI INVÁLIDO",
+            "El DNI debe tener 8 dígitos."
+        );
+
+        return;
+    }
+
+    try{
+
+        const respuesta =
+            await fetch(
+                "https://script.google.com/macros/s/AKfycbzHu5hoVNiEAtyuCpOWv3Y8Fs-u15H3e4t6LqV-K7rpwvxpDkdF39OQ_vkTk_MMZANN/exec",
+                {
+                    method:"POST",
+                    headers:{
+                        "Content-Type":
+                        "application/json"
+                    },
+                    body:JSON.stringify({
+
+                        accion:"buscarDni",
+
+                        dni:dni
+
+                    })
+                }
+            );
+
+        const resultado =
+            await respuesta.json();
+
+        if(resultado.ok){
+
+            localStorage.setItem(
+                "dni",
+                dni
+            );
+
+            localStorage.setItem(
+                "nombre",
+                resultado.nombre
+            );
+
+            localStorage.setItem(
+                "puesto",
+                resultado.puesto
+            );
+
+            localStorage.setItem(
+                "jd",
+                resultado.jd
+            );
+
+            mostrarModal(
+                "✅",
+                "BIENVENIDO",
+                resultado.nombre
+            );
+
+            setTimeout(()=>{
+
+                window.location.href =
+                    "../centroproyectos/centroproyectos.html";
+
+            },1500);
+
+        }else{
+
+            mostrarModal(
+                "⚠️",
+                "DNI NO ENCONTRADO",
+                "Comunícate con tu supervisor para validar tu registro."
+            );
+
+        }
+
+    }catch(error){
+
+        mostrarModal(
+            "❌",
+            "ERROR",
+            error.toString()
+        );
+
+        console.error(error);
+
+    }
+
+}
+
+function mostrarModal(
+    icono,
+    titulo,
+    mensaje
+){
+
+    document.getElementById(
+        "modalIcono"
+    ).textContent = icono;
+
+    document.getElementById(
+        "modalTitulo"
+    ).textContent = titulo;
+
+    document.getElementById(
+        "modalMensaje"
+    ).textContent = mensaje;
+
+    document.getElementById(
+        "modal"
+    ).style.display = "flex";
+
+}
+
+function cerrarModal(){
+
+    document.getElementById(
+        "modal"
+    ).style.display = "none";
+
+}
+
+</script>
+
+</body>
+</html>

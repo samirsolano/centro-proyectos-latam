@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen del Reporte</title>
+
+    <link rel="stylesheet" href="desviaciones4.css">
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="tituloHeader">
+            Reporte de anomalía
+        </div>
+
+    </div>
+
+    <div class="contenedor">
+
+        <!-- RESUMEN -->
+
+        <div class="cardResumen">
+
+            <div class="tituloSeccion">
+
+                <img
+                    class="iconoTituloImg"
+                    src="../../../shared/assets/icons/anomalias/resumen/resumen.png">
+
+                <div>
+
+                    <div class="tituloBloque">
+                        RESUMEN DEL REPORTE
+                    </div>
+
+                    <div class="subtituloBloque">
+                        Verifica los datos registrados.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="tablaResumen">
+
+                <div class="fila">
+
+                    <div class="etiqueta">
+
+                        <img
+                            class="iconoFila"
+                            src="../../../shared/assets/icons/anomalias/resumen/nombre.png">
+
+                        <span>Nombre</span>
+
+                    </div>
+
+                    <strong id="nombre">
+                        -
+                    </strong>
+
+                </div>
+
+                <div class="fila">
+
+                    <div class="etiqueta">
+
+                        <img
+                            class="iconoFila"
+                            src="../../../shared/assets/icons/anomalias/resumen/puesto.png">
+
+                        <span>Puesto</span>
+
+                    </div>
+
+                    <strong id="puesto">
+                        -
+                    </strong>
+
+                </div>
+
+                <div class="fila">
+
+                    <div class="etiqueta">
+
+                        <img
+                            class="iconoFila"
+                            src="../../../shared/assets/icons/anomalias/resumen/jefe.png">
+
+                        <span>Jefe Directo</span>
+
+                    </div>
+
+                    <strong id="jd">
+                        -
+                    </strong>
+
+                </div>
+
+                <div class="fila">
+
+                    <div class="etiqueta">
+
+                        <img
+                            class="iconoFila"
+                            src="../../../shared/assets/icons/anomalias/resumen/anomalia.png">
+
+                        <span>Tipo de anomalía</span>
+
+                    </div>
+
+                    <div
+                        id="tipo"
+                        class="badge">
+
+                        -
+
+                    </div>
+
+                </div>
+
+                <div class="fila">
+
+                    <div class="etiqueta">
+
+                        <img
+                            class="iconoFila"
+                            src="../../../shared/assets/icons/anomalias/resumen/zona.png">
+
+                        <span>Zona</span>
+
+                    </div>
+
+                    <strong id="zona">
+                        -
+                    </strong>
+
+                </div>
+
+                <div class="fila">
+
+                    <div class="etiqueta">
+
+                        <img
+                            class="iconoFila"
+                            src="../../../shared/assets/icons/anomalias/resumen/ubicacion.png">
+
+                        <span>Ubicación</span>
+
+                    </div>
+
+                    <strong id="ubicacion">
+                        -
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- DESCRIPCIÓN -->
+
+        <div class="cardDescripcion">
+
+            <div class="tituloSeccion">
+
+                <img
+                    class="iconoTituloImg"
+                    src="../../../shared/assets/icons/anomalias/resumen/descripcion.png">
+
+                <div class="tituloDescripcion">
+                    DESCRIPCIÓN
+                </div>
+
+            </div>
+
+            <div
+                id="descripcion"
+                class="textoDescripcion">
+
+                -
+
+            </div>
+
+        </div>
+
+        <!-- EVIDENCIAS -->
+
+        <div class="cardFotos">
+
+            <div class="tituloSeccion">
+
+                <img
+                    class="iconoTituloImg"
+                    src="../../../shared/assets/icons/anomalias/resumen/camara.png">
+
+                <div
+                    id="tituloFotos"
+                    class="tituloFotos">
+
+                    EVIDENCIAS (0/5)
+
+                </div>
+
+            </div>
+
+            <div class="subFotos">
+                Agrega hasta 5 fotos como evidencia.
+            </div>
+
+            <input
+                type="file"
+                id="evidencias"
+                accept="image/*"
+                capture="environment"
+                multiple
+                style="display:none;">
+
+            <div
+                id="contenedorFotos"
+                class="gridFotos">
+            </div>
+
+            <button class="btnAgregar">
+
+                <img
+                    class="iconoBtn"
+                    src="../../../shared/assets/icons/anomalias/resumen/camara.png">
+
+                AGREGAR EVIDENCIA
+
+            </button>
+
+        </div>
+
+        <!-- LISTO -->
+
+        <div class="cardListo">
+
+            <img
+                class="iconoCheck"
+                src="../../../shared/assets/icons/anomalias/resumen/check.png">
+
+            <div>
+
+                <div class="tituloListo">
+                    Listo para enviar
+                </div>
+
+                <div class="textoListo">
+                    Verifica la información y adjunta las evidencias necesarias antes de enviar el reporte.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- BOTONES -->
+
+        <div class="botones">
+
+            <button
+                class="btnAtras"
+                onclick="volver()">
+
+                ← Atrás
+
+            </button>
+
+            <button
+                class="btnEnviar"
+                onclick="enviarReporte()">
+
+                <img
+                    class="iconoEnviar"
+                    src="../../../shared/assets/icons/anomalias/resumen/enviar.png">
+
+                Enviar reporte
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="desviaciones4.js"></script>
+
+</body>
+
+</html>

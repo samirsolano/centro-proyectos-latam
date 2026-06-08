@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+          initial-scale=1,
+          maximum-scale=1,
+          user-scalable=no">
+
+    <title>Reporte de Anomalía</title>
+
+    <link rel="stylesheet"
+          href="desviaciones3.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="tituloHeader">
+            Reporte de Anomalía
+        </div>
+
+    </div>
+
+    <div class="contenedor">
+
+        <div class="tituloPrincipal">
+            ¿DÓNDE OCURRIÓ?
+        </div>
+
+        <div class="subtitulo">
+            Completa la información del lugar y describe la anomalía.
+        </div>
+
+        <label>
+            Zona <span>*</span>
+        </label>
+
+        <select id="zona">
+
+            <option value="">
+                Seleccione una zona
+            </option>
+
+            <option value="ZONA 1">
+                Zona 1 - Pasillos 1 al 12 + Zona de Baterías
+            </option>
+
+            <option value="ZONA 2">
+                Zona 2 - Racks (Pasillos 13 al 24)
+            </option>
+
+            <option value="ZONA 3">
+                Zona 3 - Despacho / Módulos (Canal 01 al 53)
+            </option>
+
+            <option value="ZONA 4">
+                Zona 4 - Canal 54 al 84 + Inbound + Patio
+            </option>
+
+            <option value="ZONA 5">
+                Zona 5 - Oficinas y Facturación
+            </option>
+
+            <option value="ZONA 6">
+                Zona 6 - Zona Externa (Vestuarios)
+            </option>
+
+
+        </select>
+
+        <label>
+            Ubicación <span>*</span>
+        </label>
+
+        <input
+            type="text"
+            id="ubicacion"
+            inputmode="text"
+            autocomplete="off"
+            autocorrect="off"
+            spellcheck="false"
+            placeholder="Ej: Rack B12-03-04">
+
+        <label>
+            Descripción de la anomalía <span>*</span>
+        </label>
+
+        <textarea
+            id="descripcion"
+            maxlength="500"
+            placeholder="Describe lo que encontraste..."></textarea>
+
+        <div class="contador">
+
+            <span id="contador">
+                0
+            </span>/500
+
+        </div>
+
+        <div class="info">
+
+            <div class="infoIcono">
+                ℹ️
+            </div>
+
+            <div>
+                Asegúrate de seleccionar la ubicación exacta donde ocurrió la desviación.
+            </div>
+
+        </div>
+
+        <div class="botones">
+
+            <button
+                class="btnAtras"
+                onclick="volver()">
+
+                ← Atrás
+
+            </button>
+
+            <button
+                class="btnSiguiente"
+                onclick="continuar()">
+
+                Siguiente →
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="desviaciones3.js"></script>
+
+</body>
+
+</html>

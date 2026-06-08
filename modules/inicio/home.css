@@ -1,0 +1,220 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f6fb;
+}
+
+
+.contenedor{
+    max-width:430px;
+    margin:auto;
+    padding:20px 20px 5px 20px;
+}
+
+/* HEADER */
+
+.header{
+    text-align:center;
+    margin-top:20px;
+}
+
+.header h1{
+    color:#0b2f7a;
+    font-size:42px;
+    font-weight:800;
+}
+
+.header h2{
+    color:#0b2f7a;
+    font-size:26px;
+    margin-top:5px;
+}
+
+.linea{
+    width:90px;
+    height:5px;
+    background:#1f6fff;
+    margin:15px auto;
+    border-radius:10px;
+}
+
+.planta{
+    color:#1f6fff;
+    font-weight:bold;
+    font-size:18px;
+}
+
+/* TARJETA USUARIO */
+
+.card-usuario{
+    background:white;
+    margin-top:25px;
+    padding:25px;
+    border-radius:25px;
+    text-align:center;
+    border:1px solid #d9e4ff;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.nombre{
+    font-size:26px;
+    font-weight:800;
+    color:#0b2f7a;
+    line-height:1.2;
+}
+
+.puesto{
+    margin-top:8px;
+    color:#555;
+    font-size:18px;
+}
+
+.mensaje{
+    margin-top:10px;
+    color:#888;
+    font-size:15px;
+}
+
+/* TEXTO */
+
+.texto-proyecto{
+    text-align:center;
+    margin:30px 0 20px;
+    color:#666;
+    font-size:18px;
+}
+
+/* TARJETAS */
+
+.card{
+    background:white;
+    border-radius:25px;
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.icono{
+    width:110px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:15px;
+}
+
+.icono img{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+}
+
+.contenido{
+    flex:1;
+    padding:15px;
+}
+
+.titulo-verde{
+    color:#16a637;
+    font-size:20px;
+    font-weight:800;
+}
+
+.titulo-rojo{
+    color:#e30016;
+    font-size:20px;
+    font-weight:800;
+}
+
+.descripcion{
+    margin-top:8px;
+    color:#444;
+    line-height:1.4;
+    font-size:14px;
+}
+
+/* FLECHAS */
+
+.accion-verde,
+.accion-rojo{
+    width:85px;
+    min-height:120px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:48px;
+    font-weight:bold;
+}
+
+.accion-verde{
+    background:#16b33f;
+}
+
+.accion-rojo{
+    background:#ff1d25;
+}
+
+/* FOOTER */
+
+.footer-card{
+    background:white;
+    margin-top:25px;
+    padding:18px;
+    border-radius:18px;
+    text-align:center;
+    color:#2d63c8;
+    font-size:16px;
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+.version{
+    text-align:center;
+    margin-top:20px;
+    color:#888;
+    font-size:16px;
+}
+
+html,
+body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+body{
+    min-height:auto;
+}
+
+.contenedor{
+    max-width:430px;
+    margin:auto;
+    padding:20px;
+    min-height:100dvh;
+}
+
+.version{
+    margin-bottom:0;
+    padding-bottom:0;
+}
+
+html,
+body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+    overscroll-behavior:none;
+}
+
+body{
+    background:#f4f6fb;
+    -webkit-overflow-scrolling:touch;
+}

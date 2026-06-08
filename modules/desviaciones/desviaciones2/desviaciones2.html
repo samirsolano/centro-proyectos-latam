@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Anomalía</title>
+
+    <link rel="stylesheet" href="desviaciones2.css">
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="tituloHeader">
+            Reporte de anomalía
+        </div>
+
+    </div>
+
+    <div class="contenedor">
+
+        <div class="tituloPrincipal">
+            ¿QUÉ ENCONTRASTE?
+        </div>
+
+        <div class="subtitulo">
+            Selecciona el tipo de desviación encontrada.
+        </div>
+
+        <div class="grid">
+
+            <div class="opcion" onclick="seleccionar(this,'INVENTARIO')">
+
+                <div class="icono">
+                    <img src="../../../shared/assets/icons/anomalias/inventario.png">
+                </div>
+
+                <div class="tituloOpcion">
+                    INVENTARIO
+                </div>
+
+                <div class="detalle">
+                    Producto faltante, dañado,
+                    diferencia de stock,
+                    ubicación incorrecta.
+                </div>
+
+            </div>
+
+            <div class="opcion" onclick="seleccionar(this,'INFRAESTRUCTURA')">
+
+                <div class="icono">
+                    <img src="../../../shared/assets/icons/anomalias/INFRAESTRUCTURA.png">
+                </div>
+
+                <div class="tituloOpcion">
+                    INFRAESTRUCTURA
+                </div>
+
+                <div class="detalle">
+                    Rack dañado, piso deteriorado,
+                    iluminación.
+                </div>
+
+            </div>
+
+            <div class="opcion" onclick="seleccionar(this,'CALIDAD')">
+
+                <div class="icono">
+                    <img src="../../../shared/assets/icons/anomalias/calidad.png">
+                </div>
+
+                <div class="tituloOpcion">
+                    CALIDAD
+                </div>
+
+                <div class="detalle">
+                    Producto defectuoso,
+                    etiquetado,
+                    embalaje.
+                </div>
+
+            </div>
+
+            <div class="opcion" onclick="seleccionar(this,'SEGURIDAD')">
+
+                <div class="icono">
+                    <img src="../../../shared/assets/icons/anomalias/SEGURIDAD.png">
+                </div>
+
+                <div class="tituloOpcion">
+                    SEGURIDAD
+                </div>
+
+                <div class="detalle">
+                    Acto inseguro,
+                    condición insegura,
+                    riesgos.
+                </div>
+
+            </div>
+
+            <div class="opcion" onclick="seleccionar(this,'SISTEMAS')">
+
+                <div class="icono">
+                    <img src="../../../shared/assets/icons/anomalias/sistema.png">
+                </div>
+
+                <div class="tituloOpcion">
+                    SISTEMAS
+                </div>
+
+                <div class="detalle">
+                    SAP, RF,
+                    impresoras,
+                    red WiFi.
+                </div>
+
+            </div>
+
+            <div class="opcion" onclick="seleccionar(this,'OPERACION')">
+
+                <div class="icono">
+                    <img src="../../../shared/assets/icons/anomalias/operacion.png">
+                </div>
+
+                <div class="tituloOpcion">
+                    OPERACIÓN
+                </div>
+
+                <div class="detalle">
+                    Error operativo,
+                    procedimiento incorrecto.
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="info">
+
+            <div class="infoIcono">
+                ℹ️
+            </div>
+
+            <div>
+                Selecciona el tipo que mejor describa la desviación encontrada.
+            </div>
+
+        </div>
+
+        <div class="botones">
+
+            <button class="btnAtras" onclick="volver()">
+                ← Atrás
+            </button>
+
+            <button class="btnSiguiente" onclick="continuar()">
+                Siguiente →
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="desviaciones2.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,235 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f2f3f7;
+}
+
+/* HEADER */
+
+.header{
+
+    background:#002b6b;
+
+    height:120px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.15);
+
+    border-bottom-left-radius:25px;
+    border-bottom-right-radius:25px;
+}
+
+.tituloHeader{
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:900;
+
+    line-height:1.1;
+
+    text-align:center;
+}
+
+/* CONTENIDO */
+
+.contenido{
+
+    max-width:430px;
+
+    margin:auto;
+
+    padding:20px 15px 30px;
+}
+
+/* BIENVENIDA */
+
+.bienvenidaCard{
+
+    background:white;
+
+    border-radius:25px;
+
+    padding:25px;
+
+    margin-top:-20px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.08);
+}
+
+.nombreBienvenida{
+
+    color:#002b6b;
+
+    font-size:26px;
+
+    font-weight:800;
+}
+
+.puestoBienvenida{
+
+    color:#666;
+
+    font-size:16px;
+
+    margin-top:8px;
+}
+
+.textoBienvenida{
+
+    color:#666;
+
+    font-size:16px;
+
+    margin-top:15px;
+}
+
+/* TARJETAS */
+
+.card{
+
+    background:white;
+
+    border-radius:25px;
+
+    margin-bottom:20px;
+
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.card:active{
+
+    transform:scale(.98);
+}
+
+.contenidoInterno{
+
+    display:flex;
+
+    align-items:center;
+
+    padding:20px;
+}
+
+.icono{
+
+    width:90px;
+    height:90px;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:42px;
+
+    flex-shrink:0;
+}
+
+.rojo{
+    background:#fff1f1;
+}
+
+.amarillo{
+    background:#fff8e6;
+}
+
+.texto{
+
+    flex:1;
+
+    padding:0 15px;
+}
+
+.tituloCard{
+
+    color:#002b6b;
+
+    font-size:22px;
+
+    font-weight:800;
+
+    line-height:1.1;
+}
+
+.descripcion{
+
+    margin-top:10px;
+
+    color:#666;
+
+    font-size:14px;
+
+    line-height:1.5;
+}
+
+.flecha{
+
+    color:#e30613;
+
+    font-size:50px;
+
+    font-weight:bold;
+}
+
+/* SEGURIDAD */
+
+.seguridad{
+
+    background:white;
+
+    border-radius:20px;
+
+    padding:18px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-top:25px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+}
+
+.iconoSeguridad{
+
+    font-size:30px;
+}
+
+.tituloSeguridad{
+
+    color:#002b6b;
+
+    font-size:16px;
+
+    font-weight:700;
+}
+
+.textoSeguridad{
+
+    color:#666;
+
+    font-size:13px;
+
+    margin-top:3px;
+}

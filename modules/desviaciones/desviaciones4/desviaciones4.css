@@ -1,0 +1,308 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f4f5f8;
+}
+
+/* HEADER */
+
+.header{
+    height:90px;
+    background:#002b6b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+}
+
+.tituloHeader{
+    color:white;
+    font-size:28px;
+    font-weight:700;
+}
+
+/* CONTENEDOR */
+
+.contenedor{
+    max-width:900px;
+    margin:12px auto;
+    padding:15px;
+}
+
+/* TARJETAS */
+
+.cardResumen,
+.cardDescripcion,
+.cardFotos,
+.cardListo{
+    background:white;
+    border-radius:28px;
+    padding:25px;
+    margin-bottom:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.05);
+}
+
+/* TITULOS */
+
+.tituloSeccion{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin-bottom:20px;
+}
+
+.iconoTituloImg{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.tituloBloque{
+    color:#002b6b;
+    font-size:24px;
+    font-weight:900;
+}
+
+.subtituloBloque{
+    color:#666;
+    font-size:14px;
+    margin-top:4px;
+}
+
+.tituloDescripcion,
+.tituloFotos{
+    color:#002b6b;
+    font-size:28px;
+    font-weight:900;
+}
+
+/* TABLA RESUMEN */
+
+.tablaResumen{
+    border:1px solid #ececec;
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.fila{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    padding:18px;
+    border-bottom:1px solid #ececec;
+}
+
+.fila:last-child{
+    border-bottom:none;
+}
+
+.etiqueta{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.iconoFila{
+    width:22px;
+    height:22px;
+    object-fit:contain;
+}
+
+.fila span{
+    color:#555;
+    font-size:16px;
+}
+
+.fila strong{
+    color:#002b6b;
+    font-size:17px;
+    text-align:right;
+    max-width:55%;
+    word-break:break-word;
+}
+
+/* BADGE */
+
+.badge{
+    background:#e30613;
+    color:white;
+    padding:8px 16px;
+    border-radius:10px;
+    font-size:14px;
+    font-weight:800;
+}
+
+/* DESCRIPCIÓN */
+
+.textoDescripcion{
+    color:#444;
+    font-size:17px;
+    line-height:1.7;
+    word-break:break-word;
+}
+
+/* FOTOS */
+
+.subFotos{
+    color:#666;
+    font-size:14px;
+    margin-bottom:18px;
+}
+
+.gridFotos{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    margin-bottom:18px;
+}
+
+.miniatura{
+    position:relative;
+    aspect-ratio:1;
+}
+
+.miniatura img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    border-radius:16px;
+}
+
+.eliminar{
+    position:absolute;
+    top:-6px;
+    right:-6px;
+    width:30px;
+    height:30px;
+    border:none;
+    border-radius:50%;
+    background:#e30613;
+    color:white;
+    font-size:16px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+.btnAgregar{
+    width:100%;
+    height:65px;
+    border:2px solid #6f5cff;
+    background:white;
+    color:#6f5cff;
+    border-radius:18px;
+    font-size:18px;
+    font-weight:800;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.iconoBtn{
+    width:22px;
+    height:22px;
+    object-fit:contain;
+}
+
+/* LISTO */
+
+.cardListo{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#f3fcf6;
+}
+
+.iconoCheck{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+    flex-shrink:0;
+}
+
+.tituloListo{
+    color:#16924f;
+    font-size:24px;
+    font-weight:900;
+}
+
+.textoListo{
+    color:#555;
+    font-size:15px;
+    margin-top:5px;
+    line-height:1.5;
+}
+
+/* BOTONES */
+
+.botones{
+    display:flex;
+    gap:15px;
+    margin-top:25px;
+    margin-bottom:20px;
+}
+
+.btnAtras{
+    flex:1;
+    height:70px;
+    border:2px solid #d9d9d9;
+    background:white;
+    border-radius:18px;
+    color:#002b6b;
+    font-size:20px;
+    font-weight:800;
+}
+
+.btnEnviar{
+    flex:1.2;
+    height:70px;
+    border:none;
+    background:#e30613;
+    color:white;
+    border-radius:18px;
+    font-size:20px;
+    font-weight:800;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
+
+.iconoEnviar{
+    width:18px;
+    height:18px;
+    object-fit:contain;
+}
+
+/* EFECTOS */
+
+.btnAtras,
+.btnEnviar,
+.btnAgregar{
+    cursor:pointer;
+    transition:.15s;
+}
+
+.btnAtras:active,
+.btnEnviar:active,
+.btnAgregar:active{
+    transform:scale(.97);
+}
+
+img{
+    display:block;
+}
+
+html,
+body{
+    overflow-x:hidden;
+}

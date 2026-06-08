@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Desviaciones</title>
+
+    <link rel="stylesheet" href="desviaciones.css">
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="tituloHeader">
+            GESTIÓN DE<br>
+            DESVIACIONES Y MEJORAS
+        </div>
+
+    </div>
+
+    <div class="contenido">
+
+        <div class="bienvenidaCard">
+
+            <div class="nombreBienvenida" id="nombreBienvenida">
+                Hola, Samuel Solano
+            </div>
+
+            <div class="puestoBienvenida" id="puestoBienvenida">
+                Puesto: Operador Logístico
+            </div>
+
+            <div class="textoBienvenida">
+                ¿Qué registro deseas realizar?
+            </div>
+
+        </div>
+
+        <!-- REPORTE DE DESVIACIÓN -->
+
+        <div class="card" onclick="abrirAnomalia()">
+
+            <div class="contenidoInterno">
+
+                <div class="icono rojo">
+                    🚨
+                </div>
+
+                <div class="texto">
+
+                    <div class="tituloCard">
+                        REPORTE DE<br>
+                        DESVIACIÓN
+                    </div>
+
+                    <div class="descripcion">
+                        Registra una incidencia,
+                        desviación o problema
+                        operativo.
+                    </div>
+
+                </div>
+
+                <div class="flecha">
+                    ›
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- SUGERENCIA -->
+
+        <div class="card" onclick="abrirMejora()">
+
+            <div class="contenidoInterno">
+
+                <div class="icono amarillo">
+                    💡
+                </div>
+
+                <div class="texto">
+
+                    <div class="tituloCard">
+                        SUGERENCIA DE<br>
+                        MEJORA
+                    </div>
+
+                    <div class="descripcion">
+                        Propón ideas para mejorar
+                        nuestros procesos,
+                        seguridad, calidad y
+                        productividad.
+                    </div>
+
+                </div>
+
+                <div class="flecha">
+                    ›
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="seguridad">
+
+            <div class="iconoSeguridad">
+                🔒
+            </div>
+
+            <div>
+
+                <div class="tituloSeguridad">
+                    Tu información está segura
+                </div>
+
+                <div class="textoSeguridad">
+                    Solo personal autorizado
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="desviaciones.js"></script>
+
+</body>
+</html>
