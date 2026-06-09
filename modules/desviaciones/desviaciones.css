@@ -233,3 +233,47 @@ body{
 
     margin-top:3px;
 }
+
+/* ===================================
+   BOTÓN CENTRO DE PROYECTOS
+=================================== */
+
+.btnCentroProyectos{
+    width: 90%;
+    max-width: 380px;
+    height: 65px;
+
+    margin: 25px auto 35px;
+
+    background: #003a8c;
+    color: #fff;
+
+    border-radius: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    font-size: 18px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,.15);
+
+    transition: all .2s ease;
+}
+
+.btnCentroProyectos:active{
+    transform: scale(.98);
+}
+
+.iconoCentro{
+    font-size: 24px;
+}
+
+.textoCentro{
+    font-size: 18px;
+    font-weight: 700;
+}
