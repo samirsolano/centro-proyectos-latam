@@ -97,89 +97,86 @@ font-size:18px;
 /* TARJETAS */
 
 .card{
-background:white;
-border-radius:25px;
-display:flex;
-align-items:center;
-margin-bottom:20px;
-box-shadow:0 6px 18px rgba(0,0,0,.08);
-overflow:hidden;
-cursor:pointer;
-height:180px;
+    background:white;
+    border-radius:25px;
+    display:flex;
+    align-items:center;
+    margin-bottom:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    overflow:hidden;
+    cursor:pointer;
+
+    height:170px;
 }
 
 .icono{
-width:140px;
-min-width:140px;
+    width:120px;
+    min-width:120px;
 
-display:flex;
-justify-content:center;
-align-items:center;
-
-padding:15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
 .icono img{
-width:105px;
-height:105px;
-object-fit:contain;
+    width:85px;
+    height:85px;
+    object-fit:contain;
 }
 
 .contenido{
-flex:1;
-padding:15px 10px;
-display:flex;
-flex-direction:column;
-justify-content:center;
+    flex:1;
+    padding:0 15px;
+}
+
+.titulo-verde,
+.titulo-rojo{
+    font-size:20px;
+    font-weight:800;
+    line-height:1.15;
 }
 
 .titulo-verde{
-color:#16a637;
-font-size:20px;
-font-weight:800;
-line-height:1.15;
+    color:#16a637;
 }
 
 .titulo-rojo{
-color:#e30016;
-font-size:20px;
-font-weight:800;
-line-height:1.15;
+    color:#e30016;
 }
 
 .descripcion{
-margin-top:8px;
-color:#444;
-line-height:1.4;
-font-size:15px;
+    margin-top:10px;
+    color:#444;
+    font-size:14px;
+    line-height:1.4;
 }
 
 /* FLECHAS */
 
 .accion-verde,
 .accion-rojo{
-width:110px;
-min-width:110px;
-align-self:stretch;
+    width:115px;
+    min-width:115px;
 
-display:flex;
-justify-content:center;
-align-items:center;
+    height:170px;
 
-color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-font-size:54px;
-font-weight:300;
+    color:white;
+
+    font-size:58px;
+    font-weight:300;
 }
 
 .accion-verde{
-background:#16b33f;
+    background:#16b33f;
 }
 
 .accion-rojo{
-background:#ff1d25;
+    background:#ff1d25;
 }
-
 /* FOOTER */
 
 .footer-card{
