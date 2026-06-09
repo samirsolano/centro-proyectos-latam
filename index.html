@@ -483,13 +483,44 @@ body{
 
 <script>
 
-async function probarDNI(){
+let usuariosCache = [];
+
+window.onload = async function(){
+
+    try{
+
+        const respuesta =
+        await fetch(
+        "https://script.google.com/macros/s/AKfycbzHu5hoVNiEAtyuCpOWv3Y8Fs-u15H3e4t6LqV-K7rpwvxpDkdF39OQ_vkTk_MMZANN/exec?usuarios=1"
+        );
+
+        usuariosCache =
+        await respuesta.json();
+
+        console.log(
+        "Usuarios cargados:",
+        usuariosCache.length
+        );
+
+    }catch(error){
+
+        console.error(
+        "Error cargando usuarios",
+        error
+        );
+
+    }
+
+}
+    
+
+function probarDNI(){
 
     const dni =
-        document
-        .getElementById("dni")
-        .value
-        .trim();
+    document
+    .getElementById("dni")
+    .value
+    .trim();
 
     if(dni === ""){
 
@@ -513,75 +544,57 @@ async function probarDNI(){
         return;
     }
 
-    try{
+    const usuario =
+    usuariosCache.find(
+        x => x.dni === dni
+    );
 
-        const respuesta =
-            await fetch(
-                "https://script.google.com/macros/s/AKfycbzHu5hoVNiEAtyuCpOWv3Y8Fs-u15H3e4t6LqV-K7rpwvxpDkdF39OQ_vkTk_MMZANN/exec?dni=" + dni
-            );
+    if(usuario){
 
-        const resultado =
-            await respuesta.json();
+        localStorage.setItem(
+            "dni",
+            dni
+        );
 
-        if(resultado.ok){
+        localStorage.setItem(
+            "nombre",
+            usuario.nombre
+        );
 
-            localStorage.setItem(
-                "dni",
-                dni
-            );
+        localStorage.setItem(
+            "puesto",
+            usuario.puesto
+        );
 
-            localStorage.setItem(
-                "nombre",
-                resultado.nombre
-            );
-
-            localStorage.setItem(
-                "puesto",
-                resultado.puesto
-            );
-
-            localStorage.setItem(
-                "jd",
-                resultado.jd
-            );
-
-            mostrarModal(
-                "✅",
-                "BIENVENIDO",
-                resultado.nombre
-            );
-
-            setTimeout(() => {
-
-                window.location.href =
-                    "./modules/inicio/home.html";
-
-            }, 1500);
-
-        }else{
-
-            mostrarModal(
-                "⚠️",
-                "DNI NO ENCONTRADO",
-                "Comunícate con tu supervisor para validar tu registro."
-            );
-
-        }
-
-    }catch(error){
-
-        console.error(error);
+        localStorage.setItem(
+            "jd",
+            usuario.jd
+        );
 
         mostrarModal(
-            "❌",
-            "ERROR",
-            error.toString()
+            "✅",
+            "BIENVENIDO",
+            usuario.nombre
+        );
+
+        setTimeout(() => {
+
+            window.location.href =
+            "./modules/inicio/home.html";
+
+        },1500);
+
+    }else{
+
+        mostrarModal(
+            "⚠️",
+            "DNI NO ENCONTRADO",
+            "Comunícate con tu supervisor para validar tu registro."
         );
 
     }
 
-}
-    
+}    
 function mostrarModal(
     icono,
     titulo,
