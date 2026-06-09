@@ -34,27 +34,21 @@ body{
 }
 
 .container{
-
     width:100%;
     max-width:430px;
-
     margin:auto;
-
-    padding:10px 20px 0;
-
+    padding:25px 25px 0;
     text-align:center;
 }
 
 /* LOGO */
 
 .logo{
-
-    font-size:78px;
+    font-size:92px;
     font-weight:900;
-
     color:#0047d4;
-
     line-height:1;
+    letter-spacing:-2px;
 }
 
 .sublogo{
@@ -82,35 +76,33 @@ body{
 /* TITULO */
 
 .titulo{
-
     color:#00379d;
-
-    font-size:26px;
+    font-size:30px;
     font-weight:800;
-
-    line-height:1.15;
+    line-height:1.1;
+    margin-bottom:20px;
 }
 
 /* ICONO */
 
 .icono{
-
-    width:135px;
-    height:135px;
+    width:150px;
+    height:150px;
 
     border:4px solid #0047d4;
-
     border-radius:50%;
 
-    margin:20px auto 10px;
+    margin:10px auto 15px;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    font-size:65px;
-}
+    font-size:75px;
 
+    color:#0047d4;
+}
+    
 /* BIENVENIDA */
 
 .bienvenido{
@@ -135,24 +127,52 @@ body{
 
 /* INPUT */
 
-.input-box{
 
-    width:100%;
 
-    padding:18px;
+.input-box::placeholder{
+
+    color:#b0b0b0;
+}
+
+
+.input-container{
+
+    display:flex;
+    align-items:center;
 
     border:2px solid #bfd0ff;
 
     border-radius:18px;
 
-    font-size:20px;
+    background:white;
 
-    text-align:center;
+    padding:0 18px;
+
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
 }
 
-.input-box::placeholder{
+.input-icon{
 
-    color:#b0b0b0;
+    font-size:30px;
+
+    margin-right:10px;
+
+    color:#7a7a7a;
+}
+
+.input-box{
+
+    flex:1;
+
+    border:none;
+
+    padding:22px 0;
+
+    font-size:20px;
+
+    outline:none;
+
+    text-align:left;
 }
 
 /* BOTON */
@@ -161,9 +181,9 @@ body{
 
     width:100%;
 
-    margin-top:18px;
+    margin-top:22px;
 
-    padding:20px;
+    padding:22px;
 
     border:none;
 
@@ -173,10 +193,10 @@ body{
 
     color:white;
 
-    font-size:22px;
+    font-size:24px;
     font-weight:bold;
 
-    box-shadow:0 5px 12px rgba(0,0,0,.15);
+    box-shadow:0 6px 18px rgba(0,0,0,.18);
 
     cursor:pointer;
 }
@@ -189,19 +209,24 @@ body{
 
     color:#8c8c8c;
 
-    font-size:15px;
+    font-size:13px;
+
+    opacity:.8;
 }
 
 /* ONDA */
 
 .wave{
-
-    margin-top:8px;
-
-    height:35px;
-
+    width:100%;
+    height:90px;
+    overflow:hidden;
+    margin-top:20px;
 }
 
+.wave svg{
+    width:100%;
+    height:100%;
+}
 /* CREDITOS */
 
 .creditos{
@@ -369,12 +394,19 @@ body{
         Ingrese su DNI
     </div>
 
+    <div class="input-container">
+
+    <span class="input-icon">🪪</span>
+
     <input
         id="dni"
         class="input-box"
-        type="text"
+        type="tel"
+        inputmode="numeric"
         maxlength="8"
         placeholder="Ej: 12345678">
+     
+    </div>
 
     <button
         class="btn"
@@ -388,8 +420,14 @@ body{
 
 </div>
 
-<div class="wave"></div>
-
+<div class="wave">
+    <svg viewBox="0 0 500 120" preserveAspectRatio="none">
+        <path d="M0,20 C150,120 350,120 500,20 L500,120 L0,120 Z"
+              fill="#dbe7ff">
+        </path>
+    </svg>
+</div>    
+    
 <div class="creditos">
 
     <div class="creditos-titulo">
