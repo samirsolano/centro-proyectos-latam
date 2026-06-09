@@ -183,7 +183,7 @@ async function enviarReporte() {
 
         // CONVERTIR FOTOS A BASE64
 
-        for(const foto of fotos){
+        for (const foto of fotos) {
 
             const base64 =
                 await convertirABase64(
@@ -199,8 +199,8 @@ async function enviarReporte() {
         await fetch(
             "https://script.google.com/macros/s/AKfycbzHu5hoVNiEAtyuCpOWv3Y8Fs-u15H3e4t6LqV-K7rpwvxpDkdF39OQ_vkTk_MMZANN/exec",
             {
-                method:"POST",
-                mode:"no-cors",
+                method: "POST",
+                mode: "no-cors",
                 body:
                     JSON.stringify(
                         datos
@@ -208,8 +208,11 @@ async function enviarReporte() {
             }
         );
 
-        window.location.href =
-            "../exito/exito.html";
+        // MOSTRAR MODAL DE ÉXITO
+
+        document.getElementById(
+            "modalExito"
+        ).style.display = "flex";
 
     } catch (error) {
 
@@ -223,10 +226,16 @@ async function enviarReporte() {
 
     btnEnviar.disabled = false;
 
-    btnEnviar.textContent =
-        "Enviar reporte";
+    btnEnviar.innerHTML = `
+        <img
+            class="iconoEnviar"
+            src="../../../shared/assets/icons/anomalias/resumen/enviar.png">
+
+        Enviar reporte
+    `;
 
 }
+
 
 function convertirABase64(
     archivo
@@ -254,5 +263,35 @@ function convertirABase64(
 
         }
     );
+
+}
+
+
+function limpiarRegistro() {
+
+    localStorage.removeItem("tipoDesviacion");
+    localStorage.removeItem("zona");
+    localStorage.removeItem("ubicacion");
+    localStorage.removeItem("descripcion");
+
+    fotos = [];
+
+}
+
+function irCentroProyectos() {
+
+    limpiarRegistro();
+
+    window.location.href =
+        "../../inicio/home.html";
+
+}
+
+function nuevoRegistro() {
+
+    limpiarRegistro();
+
+    window.location.href =
+        "../desviaciones.html";
 
 }
