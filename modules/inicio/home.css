@@ -105,30 +105,25 @@ margin-bottom:20px;
 box-shadow:0 6px 18px rgba(0,0,0,.08);
 overflow:hidden;
 cursor:pointer;
-
-```
-height:150px;
-```
+height:180px;
 
 }
 
 .icono{
-width:110px;
-min-width:110px;
+width:125px;
+min-width:125px;
 
-```
 display:flex;
 justify-content:center;
 align-items:center;
 
 padding:10px;
-```
 
 }
 
 .icono img{
-width:70px;
-height:70px;
+width:90px;
+height:90px;
 object-fit:contain;
 }
 
@@ -142,14 +137,14 @@ justify-content:center;
 
 .titulo-verde{
 color:#16a637;
-font-size:18px;
+font-size:21px;
 font-weight:800;
 line-height:1.15;
 }
 
 .titulo-rojo{
 color:#e30016;
-font-size:18px;
+font-size:21px;
 font-weight:800;
 line-height:1.15;
 }
@@ -158,27 +153,25 @@ line-height:1.15;
 margin-top:8px;
 color:#444;
 line-height:1.35;
-font-size:13px;
+font-size:14px;
 }
 
 /* FLECHAS */
 
 .accion-verde,
 .accion-rojo{
-width:105px;
+width:120px;
 
-```
 display:flex;
 justify-content:center;
 align-items:center;
 
 color:white;
 
-font-size:50px;
+font-size:60px;
 font-weight:300;
 
 flex-shrink:0;
-```
 
 }
 
