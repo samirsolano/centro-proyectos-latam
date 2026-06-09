@@ -62,10 +62,10 @@ body{
 }
 
 .nombre{
-    font-size:26px;
+    font-size:22px;
     font-weight:800;
     color:#0b2f7a;
-    line-height:1.2;
+    line-height:1.15;
 }
 
 .puesto{
@@ -148,12 +148,16 @@ body{
 
 .accion-verde,
 .accion-rojo{
-    width:85px;
-    min-height:120px;
+    width:90px;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
+    align-self:stretch;
+
     color:white;
+
     font-size:48px;
     font-weight:bold;
 }
