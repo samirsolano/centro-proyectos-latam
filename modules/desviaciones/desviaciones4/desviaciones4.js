@@ -181,47 +181,24 @@ async function enviarReporte() {
 
     try {
 
-        const respuesta =
-            await fetch(
-                "https://script.google.com/macros/s/AKfycbzHu5hoVNiEAtyuCpOWv3Y8Fs-u15H3e4t6LqV-K7rpwvxpDkdF39OQ_vkTk_MMZANN/exec",
-                {
-                    method: "POST",
-                    headers: {
-                        "Content-Type":
-                            "application/json"
-                    },
-                    body:
-                        JSON.stringify(datos)
-                }
-            );
+        await fetch(
+            "https://script.google.com/macros/s/AKfycbzHu5hoVNiEAtyuCpOWv3Y8Fs-u15H3e4t6LqV-K7rpwvxpDkdF39OQ_vkTk_MMZANN/exec",
+            {
+                method: "POST",
+                mode: "no-cors",
+                body: JSON.stringify(datos)
+            }
+        );
 
-        const resultado =
-            await respuesta.json();
-
-        if (resultado.ok) {
-
-            localStorage.setItem(
-                "codigoGenerado",
-                resultado.correlativo
-            );
-
-            window.location.href =
-                "../exito/exito.html";
-
-        } else {
-
-            alert(
-                "Error al guardar"
-            );
-
-        }
+        window.location.href =
+            "../exito/exito.html";
 
     } catch (error) {
 
         console.error(error);
 
         alert(
-            error.message
+            "Error al enviar reporte"
         );
 
     }
