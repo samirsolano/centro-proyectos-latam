@@ -103,16 +103,20 @@ body{
 }
 
 .icono{
-    width:110px;
+    width:130px;
+    min-width:130px;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     padding:15px;
 }
 
 .icono img{
-    width:75px;
-    height:75px;
+    width:95px;
+    height:95px;
+
     object-fit:contain;
 }
 
