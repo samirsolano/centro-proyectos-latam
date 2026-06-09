@@ -106,12 +106,12 @@ font-size:18px;
     overflow:hidden;
     cursor:pointer;
 
-    height:170px;
+    height:140px;
 }
 
 .icono{
-    width:120px;
-    min-width:120px;
+    width:100px;
+    min-width:100px;
 
     display:flex;
     justify-content:center;
@@ -119,8 +119,8 @@ font-size:18px;
 }
 
 .icono img{
-    width:85px;
-    height:85px;
+    width:65px;
+    height:65px;
     object-fit:contain;
 }
 
@@ -131,7 +131,7 @@ font-size:18px;
 
 .titulo-verde,
 .titulo-rojo{
-    font-size:20px;
+    font-size:18px;
     font-weight:800;
     line-height:1.15;
 }
@@ -147,18 +147,18 @@ font-size:18px;
 .descripcion{
     margin-top:10px;
     color:#444;
-    font-size:14px;
-    line-height:1.4;
+    font-size:13px;
+    line-height:1.3;
 }
 
 /* FLECHAS */
 
 .accion-verde,
 .accion-rojo{
-    width:115px;
-    min-width:115px;
+    width:95px;
+    min-width:95px;
 
-    height:170px;
+    height:140px;
 
     display:flex;
     justify-content:center;
@@ -166,7 +166,7 @@ font-size:18px;
 
     color:white;
 
-    font-size:58px;
+    font-size:48px;
     font-weight:300;
 }
 
