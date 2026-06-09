@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Sugerencia de Mejora</title>
+
+    <link rel="stylesheet"
+          href="sugerencia1.css">
+
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div class="tituloHeader">
+            Sugerencia de mejora
+        </div>
+
+    </div>
+
+    <div class="contenedor">
+
+        <div class="tituloPrincipal">
+            ¿QUÉ DESEAS MEJORAR?
+        </div>
+
+        <div class="subtitulo">
+            Selecciona el área y el tipo de mejora.
+        </div>
+
+        <!-- ÁREA -->
+
+        <div class="pregunta">
+            1. ¿EN QUÉ ÁREA?
+        </div>
+
+        <div class="grupoOpciones">
+
+            <label class="opcionRadio">
+                <input type="radio" name="area" value="OPERACIONES">
+                <span>Operaciones</span>
+            </label>
+
+            <label class="opcionRadio">
+                <input type="radio" name="area" value="INVENTARIO">
+                <span>Inventario</span>
+            </label>
+
+            <label class="opcionRadio">
+                <input type="radio" name="area" value="CALIDAD">
+                <span>Calidad</span>
+            </label>
+
+            <label class="opcionRadio">
+                <input type="radio" name="area" value="SEGURIDAD">
+                <span>Seguridad</span>
+            </label>
+
+            <label class="opcionRadio">
+                <input type="radio" name="area" value="SISTEMAS">
+                <span>Sistemas</span>
+            </label>
+
+            <label class="opcionRadio">
+                <input type="radio" name="area" value="INFRAESTRUCTURA">
+                <span>Infraestructura</span>
+            </label>
+
+            <label class="opcionRadio">
+
+                <input
+                    type="radio"
+                    name="area"
+                    value="OTRA"
+                    onchange="mostrarAreaOtra()">
+
+                <span>Otra (especificar)</span>
+
+            </label>
+
+        </div>
+
+        <input
+            type="text"
+            id="otraArea"
+            class="campoOculto"
+            placeholder="Escribe el área">
+
+        <!-- TIPO DE MEJORA -->
+
+        <div class="pregunta espacioSuperior">
+            2. ¿QUÉ TIPO DE MEJORA?
+        </div>
+
+        <div class="grupoOpciones">
+
+            <label class="opcionRadio">
+                <input type="radio" name="tipo" value="PROCESO">
+                <span>Proceso</span>
+            </label>
+
+            <label class="opcionRadio">
+                <input type="radio" name="tipo" value="TECNOLOGIA">
+                <span>Tecnología / Herramienta</span>
+            </label>
+
+            <label class="opcionRadio">
+                <input type="radio" name="tipo" value="METODO">
+                <span>Método de trabajo</span>
+            </label>
+
+            <label class="opcionRadio">
+                <input type="radio" name="tipo" value="INFRAESTRUCTURA">
+                <span>Infraestructura</span>
+            </label>
+
+            <label class="opcionRadio">
+                <input type="radio" name="tipo" value="CAPACITACION">
+                <span>Capacitación</span>
+            </label>
+
+            <label class="opcionRadio">
+
+                <input
+                    type="radio"
+                    name="tipo"
+                    value="OTRA"
+                    onchange="mostrarTipoOtro()">
+
+                <span>Otra (especificar)</span>
+
+            </label>
+
+        </div>
+
+        <input
+            type="text"
+            id="otroTipo"
+            class="campoOculto"
+            placeholder="Escribe el tipo de mejora">
+
+        <!-- BOTONES -->
+
+        <div class="botones">
+
+            <button
+                class="btnAtras"
+                onclick="volver()">
+
+                ← Atrás
+
+            </button>
+
+            <button
+                class="btnSiguiente"
+                onclick="continuar()">
+
+                Continuar →
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- MODAL VALIDACIÓN -->
+
+    <div id="modalValidacion" class="modalOculto">
+
+        <div class="modalContenido">
+
+            <div class="modalTitulo">
+                ⚠️ Información incompleta
+            </div>
+
+            <div class="modalTexto">
+                Selecciona un área y un tipo de mejora para continuar.
+            </div>
+
+            <button
+                class="btnModal"
+                onclick="cerrarModal()">
+
+                Entendido
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="sugerencia1.js"></script>
+
+</body>
+
+</html>
