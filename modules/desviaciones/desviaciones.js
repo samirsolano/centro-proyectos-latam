@@ -34,5 +34,5 @@ function abrirAnomalia(){
 }
 
 function abrirMejora() {
-    window.location.href = "../sugerencia1/sugerencia1.html";
+    window.location.href = "sugerencia1/sugerencia1.html";
 }
