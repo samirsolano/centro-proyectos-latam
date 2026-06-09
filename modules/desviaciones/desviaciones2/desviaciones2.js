@@ -21,9 +21,7 @@ function continuar() {
 
     if (!tipoSeleccionado) {
 
-        alert(
-            "Selecciona una opción"
-        );
+        abrirModal();
 
         return;
     }
@@ -39,4 +37,12 @@ function continuar() {
 
 function volver() {
     window.location.href = "../desviaciones.html";
+}
+
+function abrirModal() {
+    document.getElementById("modalAviso").style.display = "flex";
+}
+
+function cerrarModal() {
+    document.getElementById("modalAviso").style.display = "none";
 }
