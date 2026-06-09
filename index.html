@@ -7,6 +7,9 @@
 
 <title>LATAM 400 CL</title>
 
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#0047d4">
+    
 <style>
 
 *{
@@ -582,5 +585,24 @@ function cerrarModal(){
 
 </script>
 
+<script>
+
+if("serviceWorker" in navigator){
+
+    navigator.serviceWorker
+        .register("./service-worker.js")
+        .then(() => {
+
+            console.log(
+                "PWA lista"
+            );
+
+        });
+
+}
+
+</script>
+
 </body>
 </html>
+    
