@@ -38,7 +38,5 @@ function continuar() {
 }
 
 function volver() {
-
-    window.location.href =
-        "../desviaciones/desviaciones.html";
+    window.location.href = "../desviaciones.html";
 }
