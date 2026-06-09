@@ -181,12 +181,30 @@ async function enviarReporte() {
 
     try {
 
+        // CONVERTIR FOTOS A BASE64
+
+        for(const foto of fotos){
+
+            const base64 =
+                await convertirABase64(
+                    foto
+                );
+
+            datos.fotos.push(
+                base64
+            );
+
+        }
+
         await fetch(
             "https://script.google.com/macros/s/AKfycbzHu5hoVNiEAtyuCpOWv3Y8Fs-u15H3e4t6LqV-K7rpwvxpDkdF39OQ_vkTk_MMZANN/exec",
             {
-                method: "POST",
-                mode: "no-cors",
-                body: JSON.stringify(datos)
+                method:"POST",
+                mode:"no-cors",
+                body:
+                    JSON.stringify(
+                        datos
+                    )
             }
         );
 
@@ -207,5 +225,34 @@ async function enviarReporte() {
 
     btnEnviar.textContent =
         "Enviar reporte";
+
+}
+
+function convertirABase64(
+    archivo
+){
+
+    return new Promise(
+        (resolve,reject)=>{
+
+            const reader =
+                new FileReader();
+
+            reader.onload =
+                () => resolve(
+                    reader.result
+                );
+
+            reader.onerror =
+                error => reject(
+                    error
+                );
+
+            reader.readAsDataURL(
+                archivo
+            );
+
+        }
+    );
 
 }
