@@ -62,9 +62,9 @@ function continuar(){
         !descripcion
     ){
 
-        alert(
-            "Completa todos los campos"
-        );
+        document.getElementById(
+            "modalValidacion"
+        ).style.display = "flex";
 
         return;
     }
@@ -128,3 +128,11 @@ document.addEventListener(
 
     }
 );
+
+function cerrarModal(){
+
+    document.getElementById(
+        "modalValidacion"
+    ).style.display = "none";
+
+}
