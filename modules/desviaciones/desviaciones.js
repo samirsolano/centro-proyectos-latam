@@ -33,10 +33,6 @@ function abrirAnomalia(){
 
 }
 
-function abrirMejora(){
-
-    alert(
-        "Módulo en construcción"
-    );
-
+function abrirMejora() {
+    window.location.href = "../sugerencia1/sugerencia1.html";
 }
