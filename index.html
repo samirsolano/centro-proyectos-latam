@@ -483,21 +483,7 @@ async function probarDNI(){
 
         const respuesta =
             await fetch(
-                "https://script.google.com/macros/s/AKfycbzHu5hoVNiEAtyuCpOWv3Y8Fs-u15H3e4t6LqV-K7rpwvxpDkdF39OQ_vkTk_MMZANN/exec",
-                {
-                    method:"POST",
-                    headers:{
-                        "Content-Type":
-                        "application/json"
-                    },
-                    body:JSON.stringify({
-
-                        accion:"buscarDni",
-
-                        dni:dni
-
-                    })
-                }
+                "https://script.google.com/macros/s/AKfycbzHu5hoVNiEAtyuCpOWv3Y8Fs-u15H3e4t6LqV-K7rpwvxpDkdF39OQ_vkTk_MMZANN/exec?dni=" + dni
             );
 
         const resultado =
@@ -531,13 +517,6 @@ async function probarDNI(){
                 resultado.nombre
             );
 
-            setTimeout(()=>{
-
-                window.location.href =
-                    "../centroproyectos/centroproyectos.html";
-
-            },1500);
-
         }else{
 
             mostrarModal(
@@ -550,18 +529,18 @@ async function probarDNI(){
 
     }catch(error){
 
+        console.error(error);
+
         mostrarModal(
             "❌",
             "ERROR",
             error.toString()
         );
 
-        console.error(error);
-
     }
 
 }
-
+    
 function mostrarModal(
     icono,
     titulo,
