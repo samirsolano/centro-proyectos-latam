@@ -306,3 +306,73 @@ html,
 body{
     overflow-x:hidden;
 }
+
+/* ==========================
+   MODAL ÉXITO
+========================== */
+
+.modalExito{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.55);
+    z-index:9999;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.modalExitoContenido{
+    width:90%;
+    max-width:340px;
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    text-align:center;
+}
+
+.checkExito{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.tituloExito{
+    font-size:24px;
+    font-weight:800;
+    color:#002b6b;
+    margin-bottom:10px;
+}
+
+.textoExito{
+    color:#666;
+    margin-bottom:25px;
+}
+
+.botonesExito{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.btnCentro,
+.btnNuevo{
+    height:52px;
+    border:none;
+    border-radius:14px;
+    font-weight:700;
+    cursor:pointer;
+}
+
+.btnCentro{
+    background:#002b6b;
+    color:white;
+}
+
+.btnNuevo{
+    background:#e30613;
+    color:white;
+}
