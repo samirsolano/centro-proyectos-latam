@@ -163,6 +163,21 @@ function mostrarColaborador(index){
         ${dato.nombre}
     </option>`;
 
+    document.getElementById(
+        "txtNuevoColaborador"
+    ).style.display =
+        "none";
+
+    document.getElementById(
+        "btnGuardarNombre"
+    ).style.display =
+        "none";
+
+    document.getElementById(
+        "txtNuevoColaborador"
+    ).value =
+        "";
+
 }
 
 function actualizarHora(){
@@ -211,6 +226,11 @@ document.getElementById(
         const dato =
             colaboradores[indice];
 
+        const nombreAuditor =
+            document.getElementById(
+                "nombreColaborador"
+            ).textContent;
+
         sessionStorage.setItem(
             "pasillo",
             dato.pasillo
@@ -218,12 +238,19 @@ document.getElementById(
 
         sessionStorage.setItem(
             "auditor",
-            dato.nombre
+            nombreAuditor
         );
 
         sessionStorage.setItem(
             "foto",
             dato.foto
+        );
+
+        sessionStorage.setItem(
+            "zona",
+            sessionStorage.getItem(
+                "zonaSeleccionada"
+            )
         );
 
         sessionStorage.setItem(
