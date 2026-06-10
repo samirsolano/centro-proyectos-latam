@@ -389,6 +389,7 @@ document.getElementById(
     finalizarAuditoria
 );
 
+
 async function finalizarAuditoria(){
 
     const preguntas =
@@ -485,7 +486,10 @@ async function finalizarAuditoria(){
                 : "NO",
 
             nombreFoto:
-                p.dataset.nombreFoto || ""
+                p.dataset.nombreFoto || "",
+
+            base64:
+                p.dataset.base64 || ""
 
         });
 
@@ -546,7 +550,7 @@ async function finalizarAuditoria(){
             sessionStorage.getItem(
                 "turno"
             ) || "",
-            
+
         pasillo:
             sessionStorage.getItem(
                 "pasillo"
@@ -583,29 +587,26 @@ async function finalizarAuditoria(){
 
     try{
 
-        const respuesta =
-            await fetch(
-                API_URL,
-                {
-                    method:"POST",
+        await fetch(
+            API_URL,
+            {
+                method:"POST",
+                mode:"no-cors",
 
-                    headers:{
-                        "Content-Type":
-                        "application/json"
-                    },
+                headers:{
+                    "Content-Type":
+                    "application/json"
+                },
 
-                    body:
-                        JSON.stringify(
-                            datos
-                        )
-                }
-            );
-
-        const resultado =
-            await respuesta.json();
+                body:
+                    JSON.stringify(
+                        datos
+                    )
+            }
+        );
 
         console.log(
-            resultado
+            "AUDITORIA ENVIADA"
         );
 
         document.getElementById(
