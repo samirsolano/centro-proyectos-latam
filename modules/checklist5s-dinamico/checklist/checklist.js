@@ -389,7 +389,7 @@ document.getElementById(
     finalizarAuditoria
 );
 
-function finalizarAuditoria(){
+async function finalizarAuditoria(){
 
     const preguntas =
         document.querySelectorAll(
@@ -397,75 +397,101 @@ function finalizarAuditoria(){
         );
 
     let total = 0;
-
     let correctas = 0;
 
-    let faltanRespuestas =
-        false;
+    let faltanRespuestas = false;
+    let faltanFotos = false;
 
-    let faltanFotos =
-        false;
+    const detalle = [];
 
-    preguntas.forEach(
-        function(p){
+    preguntas.forEach(function(p){
 
-            const marcado =
+        const marcado =
+            p.querySelector(
+                ".seleccionado"
+            );
+
+        if(!marcado){
+
+            faltanRespuestas = true;
+            return;
+
+        }
+
+        total++;
+
+        const respuesta =
+            marcado.innerText
+            .replace("○","")
+            .trim();
+
+        if(
+            respuesta ==
+            p.dataset.ok
+        ){
+
+            correctas++;
+
+        }
+
+        if(
+            respuesta ==
+            p.dataset.foto
+        ){
+
+            const evidencia =
                 p.querySelector(
-                    ".seleccionado"
+                    ".evidenciaOK"
                 );
 
-            if(!marcado){
+            if(!evidencia){
 
-                faltanRespuestas =
-                    true;
-
-                return;
-
-            }
-
-            total++;
-
-            const respuesta =
-                marcado.innerText
-                .replace("○","")
-                .trim();
-
-            if(
-                respuesta ==
-                p.dataset.ok
-            ){
-
-                correctas++;
-
-            }
-
-            if(
-                respuesta ==
-                p.dataset.foto
-            ){
-
-                const evidencia =
-                    p.querySelector(
-                        ".evidenciaOK"
-                    );
-
-                if(
-                    !evidencia
-                ){
-
-                    faltanFotos =
-                        true;
-
-                }
+                faltanFotos = true;
 
             }
 
         }
-    );
 
-    if(
-        faltanRespuestas
-    ){
+        detalle.push({
+
+            s:
+                p.dataset.s,
+
+            pregunta:
+                p.dataset.pregunta,
+
+            respuesta:
+                respuesta,
+
+            respuestaOk:
+                p.dataset.ok,
+
+            cumple:
+                (
+                    respuesta ==
+                    p.dataset.ok
+                )
+                ? "SI"
+                : "NO",
+
+            fotoRequerida:
+                p.dataset.foto,
+
+            fotoTomada:
+                p.querySelector(
+                    ".evidenciaOK"
+                )
+                ? "SI"
+                : "NO",
+
+            nombreFoto:
+                p.dataset.nombreFoto || ""
+
+        });
+
+    });
+
+    if(faltanRespuestas){
 
         mostrarMensaje(
             "⚠ ATENCIÓN",
@@ -476,9 +502,7 @@ function finalizarAuditoria(){
 
     }
 
-    if(
-        faltanFotos
-    ){
+    if(faltanFotos){
 
         mostrarMensaje(
             "📷 ATENCIÓN",
@@ -497,20 +521,121 @@ function finalizarAuditoria(){
             ) * 100
         );
 
-    document.getElementById(
-        "lblResultadoFinal"
-    ).textContent =
+    const datos = {
 
-        "Resultado: " +
-        porcentaje +
-        "%";
+        tipoRegistro:
+            "AUDITORIA",
 
-    document.getElementById(
-        "modalResultado"
-    ).style.display =
-        "flex";
+        horaInicio:
+            sessionStorage.getItem(
+                "horaInicio"
+            ),
+
+        horaFin:
+            new Date()
+            .toLocaleTimeString(
+                "es-PE"
+            ),
+
+        zona:
+            sessionStorage.getItem(
+                "zona"
+            ),
+
+        turno:
+            sessionStorage.getItem(
+                "turno"
+            ) || "",
+            
+        pasillo:
+            sessionStorage.getItem(
+                "pasillo"
+            ),
+
+        nombre:
+            sessionStorage.getItem(
+                "auditor"
+            ),
+
+        porcentaje:
+            porcentaje,
+
+        resultado:
+            porcentaje >= 80
+            ? "APROBADO"
+            : "NO APROBADO",
+
+        duracion:0,
+
+        hallazgos:
+            total - correctas,
+
+        totalPreguntas:
+            total,
+
+        totalCorrectas:
+            correctas,
+
+        detalle:
+            detalle
+
+    };
+
+    try{
+
+        const respuesta =
+            await fetch(
+                API_URL,
+                {
+                    method:"POST",
+
+                    headers:{
+                        "Content-Type":
+                        "application/json"
+                    },
+
+                    body:
+                        JSON.stringify(
+                            datos
+                        )
+                }
+            );
+
+        const resultado =
+            await respuesta.json();
+
+        console.log(
+            resultado
+        );
+
+        document.getElementById(
+            "lblResultadoFinal"
+        ).textContent =
+
+            "Resultado: " +
+            porcentaje +
+            "%";
+
+        document.getElementById(
+            "modalResultado"
+        ).style.display =
+            "flex";
+
+    }catch(error){
+
+        console.error(
+            error
+        );
+
+        mostrarMensaje(
+            "ERROR",
+            "No se pudo guardar la auditoría"
+        );
+
+    }
 
 }
+
 
 // =====================================
 // MODALES
