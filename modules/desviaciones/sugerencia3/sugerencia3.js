@@ -232,16 +232,7 @@ function volver() {
 
 async function enviarSugerencia() {
 
-    if (fotos.length === 0) {
-
-        document.getElementById(
-            "modalValidacion"
-        ).style.display = "flex";
-
-        return;
-
-    }
-
+    
     const btnEnviar =
         document.querySelector(
             ".btnEnviar"
@@ -423,6 +414,6 @@ function nuevaSugerencia() {
     limpiarRegistro();
 
     window.location.href =
-        "../sugerencia1/sugerencia1.html";
+        "../../desviaciones.html";
 
 }
