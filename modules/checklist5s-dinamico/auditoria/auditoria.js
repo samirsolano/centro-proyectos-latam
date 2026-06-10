@@ -33,6 +33,25 @@ async function cargarAuditoria(){
         "tituloZona"
     ).textContent = zona;
 
+    // IMAGEN DE LA ZONA
+
+    const imagenZona =
+        sessionStorage.getItem(
+            "imagenZona"
+        );
+
+    if(imagenZona){
+
+        const hero =
+            document.querySelector(
+                ".heroZona"
+            );
+
+        hero.style.backgroundImage =
+            `url('${imagenZona}')`;
+
+    }
+
     try{
 
         const respuesta =
@@ -49,13 +68,27 @@ async function cargarAuditoria(){
         colaboradores =
             await respuesta.json();
 
+        if(
+            colaboradores.length === 0
+        ){
+
+            alert(
+                "No existen colaboradores para esta zona y turno"
+            );
+
+            return;
+
+        }
+
         cargarPasillos();
 
         actualizarHora();
 
     }catch(error){
 
-        console.error(error);
+        console.error(
+            error
+        );
 
         alert(
             "Error cargando colaboradores"
