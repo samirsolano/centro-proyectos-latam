@@ -1,0 +1,156 @@
+body{
+margin:0;
+padding:0;
+background:#f3f5f8;
+font-family:Arial,sans-serif;
+}
+
+.heroZona{
+height:260px;
+background:#003DA5;
+padding:20px;
+box-sizing:border-box;
+}
+
+.btnVolver{
+background:white;
+border:none;
+padding:12px 20px;
+border-radius:18px;
+color:#003DA5;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+}
+
+.heroZona h1{
+text-align:center;
+color:white;
+font-size:42px;
+font-weight:800;
+margin-top:40px;
+}
+
+.card{
+background:white;
+width:92%;
+max-width:700px;
+margin:-60px auto 30px auto;
+border-radius:30px;
+padding:30px;
+box-sizing:border-box;
+box-shadow:0 10px 30px rgba(0,0,0,.12);
+}
+
+.foto{
+width:220px;
+height:220px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+margin:0 auto 20px auto;
+border:8px solid white;
+box-shadow:0 6px 20px rgba(0,0,0,.15);
+}
+
+.card h2{
+text-align:center;
+margin:0;
+color:#003DA5;
+font-size:34px;
+font-weight:800;
+}
+
+.card p{
+text-align:center;
+color:#666;
+margin-top:8px;
+margin-bottom:25px;
+font-size:18px;
+}
+
+label{
+display:block;
+margin-top:15px;
+margin-bottom:8px;
+color:#003DA5;
+font-size:16px;
+font-weight:700;
+}
+
+select{
+width:100%;
+height:55px;
+border:2px solid #dfe3eb;
+border-radius:14px;
+padding:0 15px;
+font-size:16px;
+background:white;
+}
+
+.infoHora{
+display:flex;
+gap:15px;
+margin-top:25px;
+}
+
+.infoHora div{
+flex:1;
+background:#f7f9fc;
+border-radius:16px;
+padding:18px;
+text-align:center;
+}
+
+.infoHora span{
+display:block;
+color:#777;
+font-size:13px;
+}
+
+.infoHora strong{
+display:block;
+margin-top:6px;
+color:#003DA5;
+font-size:24px;
+font-weight:800;
+}
+
+#btnIniciar{
+width:100%;
+height:65px;
+margin-top:30px;
+border:none;
+border-radius:18px;
+background:#003DA5;
+color:white;
+font-size:22px;
+font-weight:bold;
+cursor:pointer;
+}
+
+#btnIniciar:hover{
+opacity:.95;
+}
+
+@media(max-width:768px){
+
+    
+.heroZona h1{
+    font-size:32px;
+}
+
+.foto{
+    width:180px;
+    height:180px;
+}
+
+.card h2{
+    font-size:28px;
+}
+
+.infoHora{
+    flex-direction:column;
+}
+
+}

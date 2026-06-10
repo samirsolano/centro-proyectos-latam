@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Auditoría 5S</title>
+
+<link
+rel="stylesheet"
+href="auditoria.css">
+
+</head>
+
+<body>
+
+<div class="heroZona">
+
+    <button
+        class="btnVolver"
+        onclick="history.back()">
+
+        ← Volver
+
+    </button>
+
+    <h1 id="tituloZona">
+        Cargando...
+    </h1>
+
+</div>
+
+<div class="card">
+
+    <img
+        id="fotoColaborador"
+        class="foto"
+        src="">
+
+    <h2 id="nombreColaborador">
+        Cargando...
+    </h2>
+
+    <p>
+        Colaborador Responsable
+    </p>
+
+    <label>
+        PASILLO
+    </label>
+
+    <select
+        id="cmbPasillo">
+    </select>
+
+    <label>
+        COLABORADOR
+    </label>
+
+    <select
+        id="cmbColaborador"
+        disabled>
+    </select>
+
+    <div class="infoHora">
+
+        <div>
+
+            <span>
+                HORA ACTUAL
+            </span>
+
+            <strong
+                id="horaActual">
+            </strong>
+
+        </div>
+
+        <div>
+
+            <span>
+                TURNO
+            </span>
+
+            <strong
+                id="turnoActual">
+            </strong>
+
+        </div>
+
+    </div>
+
+    <button
+        id="btnIniciar">
+
+        INICIAR AUDITORÍA
+
+    </button>
+
+</div>
+
+<script src="auditoria.js"></script>
+
+</body>
+
+</html>

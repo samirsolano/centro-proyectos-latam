@@ -1,0 +1,184 @@
+body{
+    margin:0;
+    padding:0;
+    background:#f5f6f8;
+    font-family:Arial,sans-serif;
+}
+
+.cabecera{
+    padding:25px 20px 10px 20px;
+}
+
+.volver{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    background:white;
+
+    padding:14px 22px;
+
+    border-radius:20px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.10);
+
+    color:#003DA5;
+
+    font-size:22px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    margin-bottom:25px;
+}
+
+.cabecera h1{
+
+    text-align:center;
+
+    color:#003DA5;
+
+    font-size:52px;
+
+    margin:10px 0 5px 0;
+
+    font-weight:800;
+}
+
+.cabecera p{
+
+    text-align:center;
+
+    color:#555;
+
+    font-size:24px;
+
+    margin-bottom:20px;
+}
+
+.gridZonas{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:18px;
+
+    padding:0 15px 30px 15px;
+}
+
+.cardZona{
+
+    background:white;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+
+    cursor:pointer;
+
+    transition:.2s;
+}
+
+.cardZona:hover{
+    transform:translateY(-2px);
+}
+
+.cardZona:active{
+    transform:scale(.98);
+}
+
+.cardZona img{
+
+    width:100%;
+
+    height:220px;
+
+    object-fit:cover;
+
+    display:block;
+}
+
+.info{
+
+    padding:18px;
+}
+
+.titulo{
+
+    color:#003DA5;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    margin-bottom:6px;
+}
+
+.nombre{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#444;
+
+    font-size:22px;
+}
+
+.flecha{
+
+    width:58px;
+
+    height:58px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#003DA5;
+
+    font-size:34px;
+
+    font-weight:bold;
+}
+
+@media (max-width:768px){
+
+    .gridZonas{
+        grid-template-columns:1fr;
+    }
+
+    .cabecera h1{
+        font-size:36px;
+    }
+
+    .cabecera p{
+        font-size:18px;
+    }
+
+    .titulo{
+        font-size:26px;
+    }
+
+    .nombre{
+        font-size:18px;
+    }
+
+}
