@@ -338,5 +338,11 @@ document
         ).style.display =
             "none";
 
+        document
+        .getElementById(
+            "txtNuevoColaborador"
+        ).value =
+            "";
+
     }
 );
