@@ -203,3 +203,80 @@ document.getElementById(
 
     }
 );
+
+
+// =====================================
+// CAMBIAR COLABORADOR
+// =====================================
+
+document
+.getElementById(
+    "btnCambiar"
+)
+.addEventListener(
+    "click",
+    function(){
+
+        document
+        .getElementById(
+            "txtNuevoColaborador"
+        ).style.display =
+            "block";
+
+        document
+        .getElementById(
+            "btnGuardarNombre"
+        ).style.display =
+            "block";
+
+    }
+);
+
+document
+.getElementById(
+    "btnGuardarNombre"
+)
+.addEventListener(
+    "click",
+    function(){
+
+        const nuevoNombre =
+            document
+            .getElementById(
+                "txtNuevoColaborador"
+            )
+            .value
+            .trim();
+
+        if(
+            nuevoNombre === ""
+        ){
+            return;
+        }
+
+        document
+        .getElementById(
+            "nombreColaborador"
+        ).textContent =
+            nuevoNombre;
+
+        document
+        .getElementById(
+            "cmbColaborador"
+        ).innerHTML =
+            `<option>${nuevoNombre}</option>`;
+
+        document
+        .getElementById(
+            "txtNuevoColaborador"
+        ).style.display =
+            "none";
+
+        document
+        .getElementById(
+            "btnGuardarNombre"
+        ).style.display =
+            "none";
+
+    }
+);
