@@ -20,8 +20,8 @@ window.onload = function(){
 
 function abrirChecklist(){
 
-    alert("Abrir módulo Check List 5S");
-
+    window.location.href =
+        "../checklist5s-dinamico/zonas/zonas.html";
 }
 
 function abrirDesviaciones(){
