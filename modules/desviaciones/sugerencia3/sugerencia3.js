@@ -414,6 +414,6 @@ function nuevaSugerencia() {
     limpiarRegistro();
 
     window.location.href =
-        "../../desviaciones.html";
+        "../desviaciones.html";
 
 }
