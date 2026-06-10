@@ -30,7 +30,7 @@ async function cargarZonas() {
 
                 <div
                     class="cardZona"
-                    onclick="seleccionarZona('${z.zona}')">
+                    onclick="seleccionarZona('${z.zona}','${z.imagen}')">
 
                     <img
                         src="${z.imagen}"
