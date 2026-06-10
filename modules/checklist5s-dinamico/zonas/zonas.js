@@ -80,11 +80,16 @@ async function cargarZonas() {
 
 }
 
-function seleccionarZona(zona) {
+function seleccionarZona(zona, imagen) {
 
     sessionStorage.setItem(
         "zonaSeleccionada",
         zona
+    );
+
+    sessionStorage.setItem(
+        "imagenZona",
+        imagen
     );
 
     window.location.href =
