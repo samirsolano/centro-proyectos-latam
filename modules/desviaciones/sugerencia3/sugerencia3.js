@@ -230,9 +230,9 @@ function volver() {
 // ENVIAR
 // =========================
 
+
 async function enviarSugerencia() {
 
-    
     const btnEnviar =
         document.querySelector(
             ".btnEnviar"
@@ -244,6 +244,9 @@ async function enviarSugerencia() {
         "Enviando...";
 
     const datos = {
+
+        tipoRegistro:
+            "SUGERENCIA",
 
         dni:
             localStorage.getItem("dni") || "",
@@ -291,8 +294,12 @@ async function enviarSugerencia() {
 
         }
 
+        console.log(datos);
+
         await fetch(
-            "TU_URL_APPS_SCRIPT",
+
+            "https://script.google.com/macros/s/AKfycbzHu5hoVNiEAtyuCpOWv3Y8Fs-u15H3e4t6LqV-K7rpwvxpDkdF39OQ_vkTk_MMZANN/exec",
+
             {
                 method: "POST",
                 mode: "no-cors",
