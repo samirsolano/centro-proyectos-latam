@@ -257,7 +257,13 @@ document.getElementById(
             "horaInicio",
             new Date().toISOString()
         );
-
+        sessionStorage.setItem(
+             "turno",
+            document.getElementById(
+               "turnoActual"
+            ).textContent
+        );
+        
         window.location.href =
             "../checklist/checklist.html";
 
