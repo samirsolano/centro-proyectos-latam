@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Checklist 5S</title>
+
+<link
+rel="stylesheet"
+href="checklist.css">
+
+</head>
+
+<body>
+
+<div class="cabeceraAuditoria">
+
+    <img
+        src="https://drive.google.com/thumbnail?id=1dHJGhpU21t6qX8XRkfEFeEAXu1Aj54sC&sz=w300"
+        class="iconoAuditoriaGrande">
+
+    <div class="tituloAuditoria">
+
+        <h1>
+            AUDITORÍA 5S
+        </h1>
+
+        <p>
+            Responde las preguntas marcando Sí o No
+        </p>
+
+    </div>
+
+</div>
+
+<div class="tarjetaInfo">
+
+    <div class="filaSuperior">
+
+        <div class="campo">
+
+            <div>
+
+                <div class="tituloCampo">
+                    ZONA
+                </div>
+
+                <div
+                    id="lblZona"
+                    class="valorCampo">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="campo">
+
+            <div>
+
+                <div class="tituloCampo">
+                    AUDITOR
+                </div>
+
+                <div
+                    id="lblAuditor"
+                    class="valorCampo">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="filaPasillo">
+
+        <div class="campoCompleto">
+
+            <div>
+
+                <div class="tituloCampo">
+                    PASILLO
+                </div>
+
+                <div
+                    id="lblPasillo"
+                    class="valorCampo">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="filaInferior">
+
+        <div class="campo">
+
+            <div>
+
+                <div class="tituloCampo">
+                    FECHA
+                </div>
+
+                <div
+                    id="lblFecha"
+                    class="valorCampo">
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="campo">
+
+            <div>
+
+                <div class="tituloCampo">
+                    HORA
+                </div>
+
+                <div
+                    id="lblHora"
+                    class="valorCampo">
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- PREGUNTAS DINÁMICAS -->
+
+<div
+    id="contenedorPreguntas">
+</div>
+
+<div class="mensajeFinal">
+
+    <span class="iconoMensaje">
+        ✔
+    </span>
+
+    <span>
+        Recuerda: La constancia es clave para mantener los resultados
+    </span>
+
+</div>
+
+<div class="contenedorFinalizar">
+
+    <button
+        id="btnFinalizar"
+        class="btnFinalizar">
+
+        🚩 FINALIZAR AUDITORÍA
+
+    </button>
+
+</div>
+
+<!-- MODAL RESULTADO -->
+
+<div
+    id="modalResultado"
+    class="modal">
+
+    <div class="modalContenido">
+
+        <div class="tituloResultado">
+
+            ✅ AUDITORÍA OK
+
+        </div>
+
+        <div
+            id="lblResultadoFinal"
+            class="resultadoFinal">
+
+        </div>
+
+        <button
+            id="btnVolverInicio"
+            class="btnModal">
+
+            VOLVER AL INICIO
+
+        </button>
+
+    </div>
+
+</div>
+
+<!-- MODAL MENSAJES -->
+
+<div
+    id="modalMensaje"
+    class="modal">
+
+    <div class="modalContenido">
+
+        <div
+            id="tituloMensaje"
+            class="tituloMensaje">
+
+        </div>
+
+        <div
+            id="textoMensaje"
+            class="textoMensaje">
+
+        </div>
+
+        <button
+            id="btnCerrarMensaje"
+            class="btnModal">
+
+            ACEPTAR
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="checklist.js"></script>
+
+</body>
+
+</html>
