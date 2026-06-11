@@ -690,7 +690,7 @@ document.getElementById(
     function(){
 
         window.location.href =
-            "../inicio/home.html";
+            "../../inicio/home.html";
 
     }
 );
