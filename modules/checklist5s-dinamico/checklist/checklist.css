@@ -333,3 +333,29 @@ body{
         font-size:18px;
     }
 }
+
+
+#textoCarga{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:600;
+    color:#0B41B1;
+}
+
+.modalContenido{
+    animation: aparecer .25s ease;
+}
+
+@keyframes aparecer{
+
+    from{
+        transform:scale(.9);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+
+}
