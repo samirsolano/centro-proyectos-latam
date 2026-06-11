@@ -390,6 +390,7 @@ document.getElementById(
 );
 
 
+
 async function finalizarAuditoria(){
 
     const preguntas =
@@ -585,6 +586,8 @@ async function finalizarAuditoria(){
 
     };
 
+    mostrarCarga();
+
     try{
 
         await fetch(
@@ -598,6 +601,8 @@ async function finalizarAuditoria(){
                     )
             }
         );
+
+        ocultarCarga();
 
         console.log(
             "AUDITORIA ENVIADA"
@@ -617,6 +622,8 @@ async function finalizarAuditoria(){
             "flex";
 
     }catch(error){
+
+        ocultarCarga();
 
         console.error(
             error
