@@ -687,3 +687,54 @@ document.getElementById(
 
     }
 );
+
+
+function mostrarCarga(){
+
+    document.getElementById(
+        "modalCarga"
+    ).style.display =
+        "flex";
+
+    document.getElementById(
+        "textoCarga"
+    ).textContent =
+        "Preparando auditoría...";
+
+    setTimeout(function(){
+
+        document.getElementById(
+            "textoCarga"
+        ).textContent =
+            "Guardando respuestas...";
+
+    },1500);
+
+    setTimeout(function(){
+
+        document.getElementById(
+            "textoCarga"
+        ).textContent =
+            "Subiendo evidencias...";
+
+    },3500);
+
+    setTimeout(function(){
+
+        document.getElementById(
+            "textoCarga"
+        ).textContent =
+            "Finalizando...";
+
+    },5500);
+
+}
+
+function ocultarCarga(){
+
+    document.getElementById(
+        "modalCarga"
+    ).style.display =
+        "none";
+
+}
