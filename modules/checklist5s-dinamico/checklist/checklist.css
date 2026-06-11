@@ -359,3 +359,41 @@ body{
     }
 
 }
+
+
+.spinner{
+
+    width:60px;
+    height:60px;
+
+    border:6px solid #e5e7eb;
+    border-top:6px solid #0B41B1;
+
+    border-radius:50%;
+
+    margin:auto;
+
+    animation:girar 1s linear infinite;
+
+}
+
+#textoCarga{
+
+    margin-top:20px;
+    font-size:18px;
+    font-weight:600;
+    color:#0B41B1;
+
+}
+
+@keyframes girar{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
