@@ -745,3 +745,20 @@ function ocultarCarga(){
         "none";
 
 }
+
+
+document.getElementById(
+    "btnOtraAuditoria"
+).addEventListener(
+    "click",
+    function(){
+
+        sessionStorage.removeItem(
+            "horaInicio"
+        );
+
+        window.location.href =
+            "../zonas/zonas.html";
+
+    }
+);
