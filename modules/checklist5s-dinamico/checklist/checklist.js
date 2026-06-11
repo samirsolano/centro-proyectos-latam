@@ -591,12 +591,7 @@ async function finalizarAuditoria(){
             API_URL,
             {
                 method:"POST",
-            
-                headers:{
-                    "Content-Type":
-                    "application/json"
-                },
-
+                mode:"no-cors",
                 body:
                     JSON.stringify(
                         datos
@@ -626,15 +621,16 @@ async function finalizarAuditoria(){
         console.error(
             error
         );
-          
+
         alert(
-           error.message
+            error.message
         );
-        
+
         mostrarMensaje(
-          "ERROR",
-           error.message
-        );   
+            "ERROR",
+            error.message
+        );
+
     }
 
 }
