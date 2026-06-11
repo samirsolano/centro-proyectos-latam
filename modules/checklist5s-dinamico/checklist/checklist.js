@@ -626,12 +626,15 @@ async function finalizarAuditoria(){
         console.error(
             error
         );
-
-        mostrarMensaje(
-            "ERROR",
-            "No se pudo guardar la auditoría"
+          
+        alert(
+           error.message
         );
-
+        
+        mostrarMensaje(
+          "ERROR",
+           error.message
+        );   
     }
 
 }
